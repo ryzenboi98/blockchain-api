@@ -1,5 +1,13 @@
 # blockchain-api
-This project represents a Blockchain simulation using the Flask to host and create the API. 
-A Blockchain is a descrentralized with linked blocks. Each block contains, in a generalized view, transactions data, an integer value of 32-bits aka nonce, a timestamp that the block was added to the blockchain and an hash and hash of the previous block. 
+This project represents a Blockchain simulation using the Flask to host and create the API.
 
-All this data is used to calculate each hash of the block which means that any information changed in the blockchain will break the blockchain integrity.
+##What is a Blockchain?
+A Blockchain is a descrentralized with blocks linked blocks through hashes. 
+Each block contains, in a generalized view, the following data:
+* Transactions
+* An integer value of 32-bits aka `nonce`
+* The timestamp that the block was added to the chain
+* The hash of the previous block
+* The hash of the block itself calculated by the data mentioned above
+
+
