@@ -5,6 +5,12 @@ app = Flask(__name__)
 
 blockchain = Blockchain()
 
+@app.route('/', methods = ['GET'])
+def homepage():
+    return "Welcome to the Blockchain homepage.<br/>" \
+           "<a href='http://localhost:5000/get_chain'>Get the Blockchain</a>" \
+           "<a href='http://localhost:5000/get_chain'>Mine a Blockchain</a>"
+
 @app.route('/mine_block', methods = ['GET'])
 def mine_block():
     blockchain.create_transactions()
