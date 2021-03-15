@@ -28,7 +28,7 @@ GET localhost:5000/mine_block
 ## Setup
 To setup the project use [Docker]('https://www.docker.com') to build up an Image to execute our Flask API locally. The default port configured is the port 5000, so make sure you don't have any other service already running in that port.
 
-###Steps
+### Steps
 1. Download the source code and move to it's main folder inside a terminal.
 2. Open the [Docker]('https://www.docker.com') desktop application.
 3. Execute `docker-compose up` inside the terminal.
