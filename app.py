@@ -8,8 +8,8 @@ blockchain = Blockchain()
 @app.route('/', methods = ['GET'])
 def homepage():
     return "Welcome to the Blockchain homepage.<br/>" \
-           "<a href='http://localhost:5000/get_chain'>Get the Blockchain</a>" \
-           "<a href='http://localhost:5000/get_chain'>Mine a Blockchain</a>"
+           "<a href='http://localhost:5000/get_chain'>Get the Blockchain</a><br/>" \
+           "<a href='http://localhost:5000/mine_block'>Mine a Block</a>"
 
 @app.route('/mine_block', methods = ['GET'])
 def mine_block():
