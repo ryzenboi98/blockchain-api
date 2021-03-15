@@ -3,6 +3,7 @@ This project represents a Blockchain simulation using the Flask to host and crea
 
 ##What is a Blockchain?
 A Blockchain is a descrentralized with blocks linked blocks through hashes. 
+
 Each block contains, in a generalized view, the following data:
 * Transactions
 * An integer value of 32-bits aka `nonce`
