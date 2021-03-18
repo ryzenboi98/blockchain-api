@@ -1,5 +1,5 @@
 # blockchain-api
-This project represents a Blockchain simulation using the Flask to host and create the API.
+This project represents a Blockchain simulation using Flask to host and create the API.
 
 ## What is a Blockchain?
 A Blockchain is a descrentralized system with blocks linked through hashes.
