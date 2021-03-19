@@ -2,7 +2,7 @@
 This project represents a Blockchain simulation using Flask to host and create the API.
 
 ## What is a Blockchain?
-A Blockchain is a descrentralized system with blocks linked through hashes.
+A Blockchain is a decrentralized system with blocks linked through hashes.
 
 Each block contains, in a generalized view, the following data:
 * __Transactions__
