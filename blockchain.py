@@ -45,7 +45,7 @@ class Blockchain:
 
     def create_transactions(self):
         """ A transaction is defined by a sender, a receiver and the value of the transaction """
-        """ In this cause we will only be considering the transaction hash """
+        """ In this cause we will only be considering the transaction hash and the value """
         for i in range(random.randint(3,10)):
             transaction = {
                 'hash': self.encrypt_data(str(datetime.datetime.now()) + str(i)),
