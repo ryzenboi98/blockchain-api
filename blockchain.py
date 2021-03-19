@@ -39,6 +39,7 @@ class Blockchain:
             'previous_hash': self.get_previous_block()['hash']
         }
 
+    """ Encrypt the information inside a block """
     def encrypt_data(self, block):
         """ Encrypts block data into 64 bits word """
         return hashlib.sha256(json.dumps(block).encode()).hexdigest()
@@ -46,13 +47,23 @@ class Blockchain:
     def create_transactions(self):
         """ A transaction is defined by a sender, a receiver and the value of the transaction """
         """ In this cause we will only be considering the transaction hash and the value """
-        for i in range(random.randint(3,10)):
+        for i in range(random.randint(3, 10)):
             transaction = {
                 'hash': self.encrypt_data(str(datetime.datetime.now()) + str(i)),
-                'joeCoins': random.randint(1,10)
+                'joeCoins': random.randint(1, 10)
             }
 
             self.transactions.append(transaction)
+
+    """ Verify if the block hash is inside the target range """
+    def verify_hash(self, block_hash, difficulty):
+        """ Difficulty corresponds to the number of zeros that the hash must start with """
+        target = '0' * difficulty
+
+        if block_hash[:difficulty] == target:
+            return True
+        else:
+            return False
 
     def mine_block(self):
         """ Nonce is the one of the values that will allow the user to mine a block """
@@ -67,8 +78,7 @@ class Blockchain:
             block_hash = self.encrypt_data(block)
 
             """ Check if the block hash is in target range """
-            target = '0000'
-            if block_hash[:4] == target:
+            if self.verify_hash(block_hash, 4):
                 check_hash = True
                 block['hash'] = block_hash
             else:
@@ -89,9 +99,7 @@ class Blockchain:
 
             block_hash = self.encrypt_data(previous_block)
 
-            target = '0000'
-
-            if block_hash != target:
+            if not self.verify_hash(block_hash, 4):
                 return False
 
             previous_block = block
