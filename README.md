@@ -32,5 +32,5 @@ To setup the project use [Docker](https://www.docker.com) to build up an Image t
 1. Download the source code and move to it's main folder inside a terminal.
 2. Open the [Docker](https://www.docker.com) desktop application.
 3. Execute `docker-compose up` inside the terminal.
-4. Open Postman or even browser on this [link](http://localhost:5000/get_chain) to check the genesis block
+4. Open Postman or even a browser on this [link](http://localhost:5000/get_chain) to check the genesis block
 5. Mine a block using this [link](http://localhost:5000/mine_block)
